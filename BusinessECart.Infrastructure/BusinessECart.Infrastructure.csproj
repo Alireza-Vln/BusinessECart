@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Autofac" Version="8.2.1" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\BusinessECart.App\BusinessECart.App.csproj" />
+      <ProjectReference Include="..\BusinessECart.Contracts\BusinessECart.Contracts.csproj" />
+      <ProjectReference Include="..\BusinessECart.Persistence.EF\BusinessECart.Persistence.EF.csproj" />
+      <ProjectReference Include="..\BusinessECart.Service\BusinessECart.Service.csproj" />
+    </ItemGroup>
+</Project>
