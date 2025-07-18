@@ -1,4 +1,4 @@
-namespace ClassLibrary1.Commons;
+namespace BusinessECart.Entities.Commons;
 
 public struct SystemRole
 {

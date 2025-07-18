@@ -1,4 +1,4 @@
-﻿namespace ClassLibrary1.Commons.Enums;
+﻿namespace BusinessECart.Entities.Commons.Enums;
 
 public enum Gender : byte
 {

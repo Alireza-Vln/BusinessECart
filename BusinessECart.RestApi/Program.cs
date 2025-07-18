@@ -7,7 +7,7 @@ using BusinessECart.RestApi.Configs.ExceptionHandler;
 using BusinessECart.RestApi.Configs.FluentMigratorCore;
 using BusinessECart.RestApi.Configs.Identity;
 using BusinessECart.RestApi.Configs.Swagger;
-using ClassLibrary1.Commons;
+using BusinessECart.Entities.Commons;
 using FluentMigrator.Runner;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
@@ -23,6 +23,7 @@ builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
 {
     containerBuilder.RegisterModule(new AutofacBusinessModule(configuration));
 });
+builder.Services.AddHttpClient();
 var service = builder.Services;
 builder.Configuration.AddJsonFile(
     "appsettings.json", optional: false, reloadOnChange: true);

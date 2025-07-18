@@ -6,6 +6,8 @@ using BusinessECart.Persistence.EF;
 using BusinessECart.Persistence.EF.Infrastructure;
 using BusinessECart.Service;
 using BusinessECart.Service.Authentications.Jwt;
+using BusinessECart.Service.Geographies.Geography;
+using BusinessECart.Service.Geographies.Geography.Contracts;
 using Microsoft.Extensions.Configuration;
 
 namespace BusinessECart.Infrastructure.Configs.Autofac;
@@ -45,7 +47,13 @@ public class AutofacBusinessModule(IConfiguration configuration) : Module
             .As<IDateTimeService>()
             .InstancePerLifetimeScope();
         
-
+        container.Register(c =>
+            {
+                var httpClientFactory = c.Resolve<IHttpClientFactory>();
+                var httpClient = httpClientFactory.CreateClient();
+                return new GeographyService(httpClient);
+            }).As<IGeographyService>()
+            .InstancePerLifetimeScope();
 
         base.Load(container);
     }

@@ -16,6 +16,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\BusinessECart.Contracts\BusinessECart.Contracts.csproj" />
+      <ProjectReference Include="..\BusinessECart.Entities\BusinessECart.Entities.csproj" />
     </ItemGroup>
     
 </Project>

@@ -32,7 +32,4 @@
       <ProjectReference Include="..\BusinessECart.Migrations\BusinessECart.Migrations.csproj" />
       <ProjectReference Include="..\BusinessECart.Persistence.EF\BusinessECart.Persistence.EF.csproj" />
     </ItemGroup>
-    <ItemGroup>
-      <Folder Include="Controllers\" />
-    </ItemGroup>
 </Project>
